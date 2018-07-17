@@ -1,2 +1,1 @@
-# exc_pam
-JeeSite
+#exc_pam
