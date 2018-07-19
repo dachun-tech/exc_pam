@@ -20,6 +20,8 @@ public class AdminScoAcceptanceStatistic extends DataEntity<AdminScoAcceptanceSt
 	private static final long serialVersionUID = 1L;
 
 	private String year;		// 年
+	private String beginDate;	// 开日
+	private String endDate;		// 终日
 	private String month;		// 月
 	private Integer receivingNumbers;		// 验收单数量
 	private Integer goodsNumbers;		// 商品数量
@@ -32,8 +34,11 @@ public class AdminScoAcceptanceStatistic extends DataEntity<AdminScoAcceptanceSt
 
 	private List<AdminScoAcceptanceStatistic> statisticList;//单供应商验收单统计列表
 
+	private String adminStaticDepartment;
+
 	/** 统计使用 */
 	private String goodsTreeId;		// 目录ID
+	private String goodsName;		// 商品名称
 	private String subId;		// 二级目录id
 	
 	private BigDecimal minSubtotal;
@@ -47,12 +52,28 @@ public class AdminScoAcceptanceStatistic extends DataEntity<AdminScoAcceptanceSt
 		this.year = Integer.toString(a.get(Calendar.YEAR)); //当前年
 	}
 
+
 	public String getYear() {
 		return year;
 	}
 
 	public void setYear(String year) {
 		this.year = year;
+	}
+
+	public String getBeginDate() {
+		return beginDate;
+	}
+
+	public void setBeginDate(String str) {
+		this.beginDate = str;
+	}
+	public String getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(String str) {
+		this.endDate = str;
 	}
 
 	public String getMonth() {
@@ -100,13 +121,21 @@ public class AdminScoAcceptanceStatistic extends DataEntity<AdminScoAcceptanceSt
 		this.report = report;
 	}
 
-
 	public List<AdminScoAcceptanceStatistic> getStatisticList() {
 		return statisticList;
 	}
 
 	public void setStatisticList(List<AdminScoAcceptanceStatistic> statisticList) {
 		this.statisticList = statisticList;
+	}
+
+
+	public String getAdminStaticDepartment() {
+		return adminStaticDepartment;
+	}
+
+	public void setAdminStaticDepartment(String adminStaticDepartment) {
+		this.adminStaticDepartment = adminStaticDepartment;
 	}
 
 	public BigDecimal getTotalGoods() {
@@ -169,6 +198,14 @@ public class AdminScoAcceptanceStatistic extends DataEntity<AdminScoAcceptanceSt
 
 	public void setMaxSubtotal(BigDecimal maxSubtotal) {
 		this.maxSubtotal = maxSubtotal;
+	}
+
+	public String getGoodsName() {
+		return goodsName;
+	}
+
+	public void setGoodsName(String goodsName) {
+		this.goodsName = goodsName;
 	}
 
 	@Override

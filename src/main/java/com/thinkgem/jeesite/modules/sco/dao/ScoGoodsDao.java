@@ -32,6 +32,8 @@ public interface ScoGoodsDao extends CrudDao<ScoGoods> {
      */
     public List<ScoGoodsStatistic> statistic(ScoGoods scoGoods);
 
+    public List<ScoGoods> getGoodsNameList(ScoGoods scoGoods);
+
     /**
      * 更新状态
      * @param scoGoods

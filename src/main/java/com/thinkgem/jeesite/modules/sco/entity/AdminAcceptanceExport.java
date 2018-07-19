@@ -21,6 +21,7 @@ public class AdminAcceptanceExport extends DataEntity<AdminAcceptanceExport> {
 	private static final long serialVersionUID = 1L;
 
 	private String suppliers;		//供应商
+	private String units;		//采购单位
 	private List<RowData> rowDatas; //数据行
 
 	@ExcelField(title = "供应商", align = 2, sort = 20)
@@ -31,6 +32,15 @@ public class AdminAcceptanceExport extends DataEntity<AdminAcceptanceExport> {
 	public void setSuppliers(String suppliers) {
 		this.suppliers = suppliers;
 	}
+
+	public String getUnits() {
+		return units;
+	}
+
+	public void setUnits(String units) {
+		this.units = units;
+	}
+
 	public List<RowData> getRowDatas() {
 		return rowDatas;
 	}
@@ -40,12 +50,13 @@ public class AdminAcceptanceExport extends DataEntity<AdminAcceptanceExport> {
 	}
 
 	public class RowData{
-		private String month;		// 月份
+		private String month;		// 结束
 		private Integer receiving;		// 验收单数量/总验收单数量
 		private Integer goodsCount;		// 商品数量/总商品数量
 		private BigDecimal totalAmt;		// 采购金额/采购总金额
 
-		@ExcelField(title = "月份", align = 2, sort = 25)
+
+		@ExcelField(title = "统计时间", align = 2, sort = 25)
 		public String getMonth() {
 			return month;
 		}
@@ -53,6 +64,7 @@ public class AdminAcceptanceExport extends DataEntity<AdminAcceptanceExport> {
 		public void setMonth(String month) {
 			this.month = month;
 		}
+
 		@ExcelField(title = "验收单数量", align = 2, sort = 30)
 		public Integer getReceiving() {
 			return receiving;

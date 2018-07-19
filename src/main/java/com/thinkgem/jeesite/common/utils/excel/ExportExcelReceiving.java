@@ -14,6 +14,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFClientAnchor;
 import org.apache.poi.xssf.usermodel.XSSFRichTextString;
 import org.slf4j.Logger;
@@ -64,6 +65,7 @@ public class ExportExcelReceiving extends ExportExcel {
 		int start = 0;
 		int rowSize = 2;
 		int lastRow = 2;
+
 		for (E e : list){
 			int colunm = 0;
 			Row row = this.addRow();
@@ -101,6 +103,11 @@ public class ExportExcelReceiving extends ExportExcel {
 				index++;
 			}
 		}
+		Row row = this.addRow();
+		Cell cell = row.createCell(0);
+		cell.setCellValue("    财务科：                  供应科：                  经办人：");
+		cell.getSheet().addMergedRegion(new CellRangeAddress(lastRow+2,lastRow+4,0,4));
+
 		return this;
 	}
 }

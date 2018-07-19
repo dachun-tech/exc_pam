@@ -261,14 +261,14 @@
 				<td>实际开始时间：</td>
 				<td>
 					<input id="realityStartTime" readonly="readonly" maxlength="20" class=" Wdate required"
-							onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',isShowClear:false});"/>
+							onclick="WdatePicker({lang:'zh-cn',dateFmt:'yyyy-MM-dd HH:mm',isShowClear:false});"/>
 				</td>
 			</tr>
 			<tr>
 				<td>实际结束时间：</td>
 				<td>
 					<input id="realityEndTime" readonly="readonly" maxlength="20" class=" Wdate required" 
-							onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',isShowClear:false});"/>
+							onclick="WdatePicker({lang:'zh-cn',dateFmt:'yyyy-MM-dd HH:mm',isShowClear:false});"/>
 				</td>
 			</tr>
 		</table>
@@ -301,14 +301,14 @@
 				<td>请假<font color="red">开始</font>时间：</td>
 				<td>
 					<input id="startTime" name="startTime" type="text" readonly="readonly" maxlength="20" class=" Wdate required"
-						onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',isShowClear:false});" value="{{startTime}}"/>
+						onclick="WdatePicker({lang:'zh-cn',dateFmt:'yyyy-MM-dd HH:mm',isShowClear:false});" value="{{startTime}}"/>
 				</td>
 			</tr>
 			<tr>
 				<td>请假<font color="red">结束</font>时间：</td>
 				<td>
 					<input id="endTime" name="endTime" type="text" readonly="readonly" maxlength="20" class=" Wdate required"
-						onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',isShowClear:false});" value="{{endTime}}"/>
+						onclick="WdatePicker({lang:'zh-cn',dateFmt:'yyyy-MM-dd HH:mm',isShowClear:false});" value="{{endTime}}"/>
 				</td>
 			</tr>
 			<tr>

@@ -3,7 +3,7 @@
  * License: http://www.my97.net/dp/license.asp
  */
 var $dp,WdatePicker;(function(){var $={
-$langList:[{name:"en",charset:"UTF-8"},{name:"zh-cn",charset:"UTF-8"},{name:"zh-tw",charset:"UTF-8"}],
+$langList:[{name:"zh-cn",charset:"UTF-8"},{name:"en",charset:"UTF-8"},{name:"zh-tw",charset:"UTF-8"}],
 $skinList:[
 	{name:"default",charset:"gb2312"},
 	{name:"whyGreen",charset:"gb2312"},
@@ -18,7 +18,7 @@ enableInputMask:true,
 autoUpdateOnChanged:null,
 weekMethod:"ISO8601",
 position:{},
-lang:"auto",
+lang:"zh-cn",
 skin:"twoer",
 dateFmt:"yyyy-MM-dd",
 realDateFmt:"yyyy-MM-dd",

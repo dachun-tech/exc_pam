@@ -70,7 +70,6 @@ public class ScoGoodsTreeService extends TreeService<ScoGoodsTreeDao, ScoGoodsTr
 	public ScoGoodsTree getByName(String name,String parentId,String userId){
 		return dao.getByName(name,parentId,userId);
 	}
-
 	
 	public List<ScoGoodsTree> findList(ScoGoodsTree scoGoodsTree) {
 		if (StringUtils.isNotBlank(scoGoodsTree.getParentIds())){
@@ -78,7 +77,7 @@ public class ScoGoodsTreeService extends TreeService<ScoGoodsTreeDao, ScoGoodsTr
 		}
 		return super.findList(scoGoodsTree);
 	}
-	
+
 	@Transactional(readOnly = false)
 	public void save(ScoGoodsTree scoGoodsTree) {
 		super.save(scoGoodsTree);

@@ -36,9 +36,9 @@
 			<label>归属机构：</label><sys:treeselect id="office" name="officeId" value="${paramMap.office.id}" labelName="officeName" labelValue="${paramMap.office.name}" 
 				title="机构" url="/sys/office/treeData" cssClass="input-small" allowClear="true"/>
 			<label>开始日期：</label><input id="beginDate" name="beginDate" type="text" readonly="readonly" maxlength="20" class="input-small Wdate"
-				value="${paramMap.beginDate}" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:false});"/>
+				value="${paramMap.beginDate}" onclick="WdatePicker({lang:'zh-cn',dateFmt:'yyyy-MM-dd',isShowClear:false});"/>
 			<label>结束日期：</label><input id="endDate" name="endDate" type="text" readonly="readonly" maxlength="20" class="input-small Wdate"
-				value="${paramMap.endDate}" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:false});"/>&nbsp;&nbsp;
+				value="${paramMap.endDate}" onclick="WdatePicker({lang:'zh-cn',dateFmt:'yyyy-MM-dd',isShowClear:false});"/>&nbsp;&nbsp;
 			<input id="btnSubmit" class="btn btn-primary" type="submit" value="查询"/>
 		</div>
 	</form:form>

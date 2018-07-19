@@ -39,11 +39,11 @@
 			<label>创建时间：</label>
 			<input id="beginDate"  name="beginDate"  type="text" readonly="readonly" maxlength="20" class="input-medium Wdate" style="width:163px;"
 				value="<fmt:formatDate value="${act.beginDate}" pattern="yyyy-MM-dd"/>"
-					onclick="WdatePicker({dateFmt:'yyyy-MM-dd'});"/>
+					onclick="WdatePicker({lang:'zh-cn',dateFmt:'yyyy-MM-dd'});"/>
 				　--　
 			<input id="endDate" name="endDate" type="text" readonly="readonly" maxlength="20" class="input-medium Wdate" style="width:163px;"
 				value="<fmt:formatDate value="${act.endDate}" pattern="yyyy-MM-dd"/>"
-					onclick="WdatePicker({dateFmt:'yyyy-MM-dd'});"/>
+					onclick="WdatePicker({lang:'zh-cn',dateFmt:'yyyy-MM-dd'});"/>
 			&nbsp;<input id="btnSubmit" class="btn btn-primary" type="submit" value="查询"/>
 		</div>
 	</form:form>

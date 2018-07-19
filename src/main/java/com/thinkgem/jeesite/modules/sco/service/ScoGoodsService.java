@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.thinkgem.jeesite.common.persistence.BaseEntity;
 import com.thinkgem.jeesite.modules.sco.config.ScoGlobal;
+import com.thinkgem.jeesite.modules.sco.dao.ScoAcceptanceReportDao;
 import com.thinkgem.jeesite.modules.sco.entity.*;
 import com.thinkgem.jeesite.modules.sco.util.SerialNumberUtil;
 import com.thinkgem.jeesite.modules.sys.entity.Role;
@@ -156,7 +157,11 @@ public class ScoGoodsService extends CrudService<ScoGoodsDao, ScoGoods> {
 	public List<ScoGoodsStatistic> statistic(ScoGoods scoGoods){
 		return dao.statistic(scoGoods);
 	}
-	
+
+	public List<ScoGoods> getGoodsNameList(ScoGoods scoGoods){
+		return dao.getGoodsNameList(scoGoods);
+	}
+
 	@Transactional(readOnly = false)
 	public void delete(ScoGoods scoGoods) {
 		super.delete(scoGoods);

@@ -146,6 +146,14 @@
 					<td colspan=2 align="center">备注</td>
 					<td colspan=8>${scoAcceptanceReport.remarks}</td>
 				</tr>
+				<tr>
+					<td rowspan="2" colspan="2" align="left">送货人 :</td>
+					<td colspan="4" align="left">验收人 :</td>
+					<td rowspan="2" colspan="4" align="left">纪检监督 :</td>
+				</tr>
+				<tr>
+					<td colspan="4" align="left">验收人 :</td>
+				</tr>
 			</table>
 		</td>
 	</tr>
@@ -172,7 +180,7 @@
 
 <!-- 					注：1. “采购时网上报价”指该品牌商品制造厂商或中国销售总部的对外公众网站上公开报价，即“挂牌价”；<BR> -->
 <!-- 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.  -->
-					注：本验收单一式二联，第一联采购单位留存，作为报销入账凭证；第二联由供应商定期报采购机构。
+					注：本验收单一式三联，第一联采购单位留存，作为报销入账凭证；第二联由供应商定期报采购机构，第三联由纪检部门监督留存。
 				</td></tr>
 			</table>
 		</td>
@@ -268,6 +276,14 @@
 					<td colspan=2 align="center">备注</td>
 					<td colspan=8>${scoAcceptanceReport.remarks}</td>
 				</tr>
+				<tr>
+					<td rowspan="2" colspan="2" align="left">送货人 :</td>
+					<td colspan="4" align="left">验收人 :</td>
+					<td rowspan="2" colspan="4" align="left">纪检监督 :</td>
+				</tr>
+				<tr>
+					<td colspan="4" align="left">验收人 :</td>
+				</tr>
 			</table>
 		</td>
 	</tr>
@@ -293,7 +309,135 @@
 				<tr><td>
 
 <!-- 					注：1. “采购时网上报价”指该品牌商品制造厂商或中国销售总部的对外公众网站上公开报价，即“挂牌价”；<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.  -->
-					注：本验收单一式二联，第一联采购单位留存，作为报销入账凭证；第二联由供应商定期报采购机构。
+					注：本验收单一式三联，第一联采购单位留存，作为报销入账凭证；第二联由供应商定期报采购机构，第三联由纪检部门监督留存。
+				</td></tr>
+			</table>
+		</td>
+	</tr>
+
+</table>
+<div style='PAGE-BREAK-BEFORE: always'></div>
+<table>
+	<%--<tr>--%>
+	<%--<td class="center"><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;验收单--%>
+	<%--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--%>
+	<%--<img  style="height:100px;width:100px" src="${ctx}/sco/scoAcceptanceReport/report/qrCode?id=${scoAcceptanceReport.id}" />--%>
+	<%--</h1></td>--%>
+	<%--</tr>--%>
+	<tr>
+		<td class="center"><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;物资定点采购验收单
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<%--<img  style="height:100px;width:100px" src="http://211.166.32.4:80/ysd/qrViewYsd.action?content=单据号：520151029112907" />--%>
+			<img  style="height:100px;width:100px" src="${ctx}/sco/scoAcceptanceReport/report/qrCode?id=${scoAcceptanceReport.id}" />
+		</h1></td>
+	</tr>
+	<tr>
+		<td class="center">
+			<h2>【第3联:纪检部门监督留存】</h2>
+		</td>
+	</tr>
+</table>
+<table  border="0" cellspacing="0">
+	<tr>
+		<td width="33%" class="td1">采购单位及采购人: ${scoAcceptanceReport.department} - ${scoAcceptanceReport.linkman}       </td>
+		<td width="33%">供&nbsp;货&nbsp;单&nbsp;位:&nbsp;
+			${fns:getUserById(scoAcceptanceReport.createBy.id).name}
+		</td>
+		<td width="33%" class="td1">验收单号: ${scoAcceptanceReport.serialNumber}        </td>
+	</tr>
+	<tr>
+		<td width="33%" class="td1">电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话: ${scoAcceptanceReport.mobile}       </td>
+		<td width="33%">供货联系人:&nbsp;
+			<%--${scoAcceptanceReport.linkman}--%>
+			${cuurentUser.linkman}
+		</td>
+		<td width="33%" class="td1">发票编号:&nbsp;${scoAcceptanceReport.invoicenum}        </td>
+	</tr>
+	<tr>
+		<td width="33%" class="td1">年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度: <fmt:formatDate value="${scoAcceptanceReport.buyDate}" pattern="yyyy"/>年度     </td>
+		<td width="33%">采&nbsp;购&nbsp;日&nbsp;期:&nbsp;
+			<fmt:formatDate value="${scoAcceptanceReport.buyDate}" pattern="yyyy-MM-dd"/>
+		</td>
+		<td width="33%">采购机构:&nbsp;${scoAcceptanceReport.officeName}
+		</td>
+	</tr>
+</table>
+<br/>
+<table cellspacing="0" cellpadding="0" style="table-layout:fixed;word-break:break-all">
+	<tr>
+		<td>
+			<table cellspacing="0" cellpadding="3" border="1"  style="border-color:Black;font-family:arial;border-collapse:collapse;width:100%" bordercolor="Black">
+				<tr>
+					<td align="center" style="width:30px;">序号</td>
+					<td align="center">商品名称</td>
+					<td align="center" style="width:60px;">型号</td>
+					<td align="center">技术规格和主要配置</td>
+					<td align="center" style="width:100px;">采购单位公开价(元)</td>
+					<td align="center" style="width:80px;">实际采购单价(元)</td>
+					<td align="center" style="width:60px;">实际采购折扣(%)</td>
+					<td align="center" style="width:40px;">数量</td>
+					<td align="center" style="width:30px;">单位</td>
+					<td align="center" style="width:80px;">总         价      (元)</td>
+				</tr>
+
+				<c:forEach items="${list}" var="scoGoodsAcceptance" varStatus="status">
+					<tr>
+						<td align="center">${status.index+1}</td>
+						<td align="center">${scoGoodsAcceptance.goodsId.name}</td>
+						<td align="center">${scoGoodsAcceptance.goodsId.goodsModel}</td>
+						<td align="center">${scoGoodsAcceptance.goodsId.specification}</td>
+						<td align="center"><fmt:formatNumber value="${scoGoodsAcceptance.goodsId.normalPrice}" type="currency" pattern="￥0.00"/></td>
+						<td align="right" ><fmt:formatNumber value="${scoGoodsAcceptance.goodsId.agrtPrice}" type="currency" pattern="￥0.00"/></td>
+						<td align="right"><fmt:formatNumber value="${scoGoodsAcceptance.discountPercent}" type="percent"/></td>
+						<td align="right">${scoGoodsAcceptance.numbers}</td>
+						<td align="center">${scoGoodsAcceptance.goodsId.units}</td>
+						<td align="right"><fmt:formatNumber value="${scoGoodsAcceptance.totalPrice}" type="currency" pattern="￥0.00"/></td>
+					</tr>
+				</c:forEach>
+
+				<br />
+
+				<tr>
+					<td colspan=2 align="center">合计</td>
+					<td colspan=7 >${totalAmtChinese}</td>
+					<td align="right"><fmt:formatNumber value="${totalAmt}" type="currency" pattern="￥0.00"/></td>
+				</tr>
+				<tr>
+					<td colspan=2 align="center">备注</td>
+					<td colspan=8>${scoAcceptanceReport.remarks}</td>
+				</tr>
+				<tr>
+					<td rowspan="2" colspan="2" align="left">送货人 :</td>
+					<td colspan="4" align="left">验收人 :</td>
+					<td rowspan="2" colspan="4" align="left">纪检监督 :</td>
+				</tr>
+				<tr>
+					<td colspan="4" align="left">验收人 :</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<TABLE >
+				<TR>
+					<TD>
+						<table class="width_01 table_04" border="0" cellspacing="0" cellpadding="0">
+							<tbody>
+							<tr>
+								<td>开户银行：${cuurentUser.bankName}</td>
+								<td>账号：${cuurentUser.bankNumber}</td>
+								<td>联系人：${cuurentUser.linkman}</td>
+							</tr>
+							</tbody>
+						</table>
+					</TD>
+				</TR>
+			</TABLE>
+
+			<table>
+				<tr><td>
+					注：本验收单一式三联，第一联采购单位留存，作为报销入账凭证；第二联由供应商定期报采购机构，第三联由纪检部门监督留存。
 				</td></tr>
 			</table>
 		</td>

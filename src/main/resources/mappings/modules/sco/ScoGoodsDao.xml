@@ -201,4 +201,15 @@
 		GROUP BY goods_tree_id
 	</select>
 
+	<select id="getGoodsNameList" resultType="ScoGoods">
+		SELECT name from sco_goods a
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="createBy != null and createBy.id != null and createBy.id != ''">
+				AND a.create_by = #{createBy.id}
+			</if>
+		</where>
+		GROUP BY name
+	</select>
+
 </mapper>

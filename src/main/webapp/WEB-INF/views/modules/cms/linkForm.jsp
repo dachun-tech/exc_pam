@@ -79,7 +79,7 @@
 				&nbsp;过期时间：
 				<input id="weightDate" name="weightDate" type="text" readonly="readonly" maxlength="20" class="input-small Wdate"
 					value="<fmt:formatDate value="${link.weightDate}" pattern="yyyy-MM-dd"/>"
-					onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:true});"/>
+					onclick="WdatePicker({lang:'zh-cn',dateFmt:'yyyy-MM-dd',isShowClear:true});"/>
 				<span class="help-inline">数值越大排序越靠前，过期时间可为空，过期后取消置顶。</span>
 			</div>
 		</div>

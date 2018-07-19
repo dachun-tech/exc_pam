@@ -186,5 +186,13 @@ public class ScoAcceptanceReportService extends CrudService<ScoAcceptanceReportD
 	public List<AdminScoAcceptanceStatistic> adminStatistic(AdminScoAcceptanceStatistic adminStatistic){
 		return dao.adminStatistic(adminStatistic);
 	}
+
+	public List<AdminScoAcceptanceStatistic> adminStatisticDepartments(AdminScoAcceptanceStatistic adminStatistic){
+		return dao.adminStatisticDepartments(adminStatistic);
+	}
+
+	public List<ScoAcceptanceReport> getDepartmentList(ScoAcceptanceReport scoAcceptanceReport){
+		return dao.getDepartmentList(scoAcceptanceReport);
+	}
 	
 }

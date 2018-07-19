@@ -54,9 +54,9 @@
 						</select></td></tr>
 					<tr><td><c:if test="${empty t || t eq 'article'}">最后更新日期范围</c:if><c:if test="${t eq 'guestbook'}">留言日期范围</c:if></td><td>
 						<input id="bd" name="bd" type="text" readonly="readonly" maxlength="20" class="txt date"
-							value="${param.bd}" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:true});"/>&nbsp;~&nbsp;
+							value="${param.bd}" onclick="WdatePicker({lang:'zh-cn',dateFmt:'yyyy-MM-dd',isShowClear:true});"/>&nbsp;~&nbsp;
 						<input id="ed" name="ed" type="text" readonly="readonly" maxlength="20" class="txt date"
-							value="${param.ed}" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:true});"/>
+							value="${param.ed}" onclick="WdatePicker({lang:'zh-cn',dateFmt:'yyyy-MM-dd',isShowClear:true});"/>
 					</td></tr>
 				</table>
 			</c:when><c:otherwise>

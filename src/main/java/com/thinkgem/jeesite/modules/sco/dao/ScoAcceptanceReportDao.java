@@ -68,4 +68,8 @@ public interface ScoAcceptanceReportDao extends CrudDao<ScoAcceptanceReport> {
      */
     public List<AdminScoAcceptanceStatistic> adminStatistic(AdminScoAcceptanceStatistic adminStatistic);
 
+    public List<ScoAcceptanceReport> getDepartmentList(ScoAcceptanceReport scoAcceptanceReport);
+
+    public List<AdminScoAcceptanceStatistic> adminStatisticDepartments(AdminScoAcceptanceStatistic adminStatistic);
+
 }
